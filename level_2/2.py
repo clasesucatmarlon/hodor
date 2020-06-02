@@ -24,7 +24,7 @@ resp = requests.get(url)
 cookies["HoldTheDoor"] = resp.cookies["HoldTheDoor"]
 data_post["key"] = cookies["HoldTheDoor"]
 
-for i in range(1000):
+for i in range(1024):
     resp = requests.post(url, data=data_post, headers=header, cookies=cookies)
     print("Vote: {:d} for {:s}".format(i + 1, data_post["id"]))
 print("end of voting....")
